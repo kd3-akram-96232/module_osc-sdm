@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Enter name:"
+read name
+
+if [ -f "$name" ]
+then
+    echo "It is a file"
+    ls -lh "$name"
+elif [ -d "$name" ]
+then
+    echo "It is a directory"
+    ls "$name"
+else
+    echo "Does not exist"
+fi
